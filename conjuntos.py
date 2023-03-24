@@ -9,9 +9,6 @@ class Elemento:
     def __eq__(self, otro_nombre):
         return self.nombre == otro_nombre
 
-elemento_1 = Elemento("Alfa")
-elemento_2 = Elemento("Beta")
-
 class Conjunto:
 
     contador: int = 0
@@ -36,7 +33,15 @@ class Conjunto:
         if not self.contiene(objeto):
             self.lista_objetos.append(objeto)
 
+    def unir(self, otro_conjunto):
+        for objeto in otro_conjunto.lista_objetos:
+            self.agregar_elemento(objeto)
 
+
+
+
+elemento_1 = Elemento("Alfa")
+elemento_2 = Elemento("Beta")
 
 
 
