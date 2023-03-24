@@ -33,9 +33,23 @@ class Conjunto:
         if not self.contiene(objeto):
             self.lista_objetos.append(objeto)
 
-    def unir(self, otro_conjunto):
-        for objeto in otro_conjunto.lista_objetos:
+    def unir(self, other_conjunto):
+        for objeto in other_conjunto.lista_objetos:
             self.agregar_elemento(objeto)
+
+    def __add__(self, other_conjunto):
+        nuevo_conjunto = Conjunto(self.nombre + " UNION " + other_conjunto.nombre)
+        for objeto in self.lista_objetos:
+            nuevo_conjunto.agregar_elemento(objeto)
+        for objeto in other_conjunto.lista_objetos:
+            nuevo_conjunto.agregar_elemento(objeto)
+        return nuevo_conjunto
+
+
+
+
+
+
 
 
 
