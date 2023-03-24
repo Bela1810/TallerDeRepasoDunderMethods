@@ -9,10 +9,8 @@ class Elemento:
     def __eq__(self, otro_nombre):
         return self.nombre == otro_nombre
 
-nombre_1 = Elemento("Alfa")
-nombre_2 = Elemento("Beta")
-
-print(nombre_1 == nombre_2)
+elemento_1 = Elemento("Alfa")
+elemento_2 = Elemento("Beta")
 
 class Conjunto:
 
@@ -34,7 +32,11 @@ class Conjunto:
                 return True
             return False
 
-    def agregar_elemento(self,):
+    def agregar_elemento(self, objeto: Elemento):
+        if not self.contiene(objeto):
+            self.lista_objetos.append(objeto)
+
+
 
 
 
