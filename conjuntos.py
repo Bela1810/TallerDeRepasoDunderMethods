@@ -9,8 +9,8 @@ class Elemento:
     def __eq__(self, otro_nombre):
         return self.nombre == otro_nombre
 
-nombre_1 = Elemento("Bela")
-nombre_2 = Elemento("Jero")
+nombre_1 = Elemento("Alfa")
+nombre_2 = Elemento("Beta")
 
 print(nombre_1 == nombre_2)
 
@@ -24,6 +24,17 @@ class Conjunto:
         Conjunto.contador += 1
         self.__id = Conjunto.contador
 
+    @property
+    def id(self):
+        return self.__id
+
+    def contiene(self, objeto: Elemento) -> bool:
+        for i in self.lista_objetos:
+            if i.nombre == objeto.nombre:
+                return True
+            return False
+
+    def agregar_elemento(self,):
 
 
 
